@@ -1,0 +1,42 @@
+{
+  "name": "trailpack-archetype",
+  "version": "0.0.0",
+  "description": "GraphQL Support for Trails",
+  "homepage": "",
+  "author": {
+    "name": "trailsjs",
+    "email": "hello@trailsjs.io",
+    "url": "trailsjs.io"
+  },
+  "main": "index.js",
+  "keywords": [
+    "trailpack",
+    "trails",
+    "trailjs"
+  ],
+  "dependencies": {
+    "graphql": "^0.4.18",
+    "lodash": "^4.5.1",
+    "trailpack": "latest"
+  },
+  "devDependencies": {
+    "eslint": "^2.0.0-beta.1",
+    "eslint-config-trails": "^1.0.1",
+    "mocha": "^2.3",
+    "smokesignals": "^1.0.2",
+    "trailpack-core": "^1.0.0-beta-3",
+    "trailpack-router": "^1.0.0-beta-4",
+    "trails": "^1.0.0-beta-1"
+  },
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "repository": "git@github.com:trailsjs/trailpack-graphql.git",
+  "license": "MIT"
+}
