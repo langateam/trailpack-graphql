@@ -22,7 +22,9 @@ module.exports = {
       emit: [ ]
     },
     initialize: {
-      listen: [ ],
+      listen: [
+        //'trailpack:datastore:initialized'
+      ],
       emit: [ ]
     }
   }

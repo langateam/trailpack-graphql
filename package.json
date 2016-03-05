@@ -17,7 +17,8 @@
   "dependencies": {
     "graphql": "^0.4.18",
     "lodash": "^4.5.1",
-    "trailpack": "latest"
+    "trailpack": "latest",
+    "trails-model": "^1.0.0-beta-2"
   },
   "devDependencies": {
     "eslint": "^2.0.0-beta.1",
@@ -25,6 +26,7 @@
     "mocha": "^2.3",
     "smokesignals": "^1.0.2",
     "trailpack-core": "^1.0.0-beta-3",
+    "trailpack-datastore": "^1.0.0",
     "trailpack-router": "^1.0.0-beta-4",
     "trails": "^1.0.0-beta-1"
   },

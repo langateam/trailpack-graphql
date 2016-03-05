@@ -2,13 +2,22 @@
 
 const _ = require('lodash')
 const smokesignals = require('smokesignals')
-//const Model = require('trails-model')
+const Model = require('trails-model')
 
 module.exports = _.defaultsDeep({
   pkg: {
     name: 'graphql-trailpack-test'
   },
   api: {
+    models: {
+      User: class User extends Model {
+        static schema () {
+          return {
+          }
+        }
+      }
+
+    }
   },
   config: {
     main: {

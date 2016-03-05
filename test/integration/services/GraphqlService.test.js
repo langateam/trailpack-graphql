@@ -6,4 +6,5 @@ describe('GraphqlService', () => {
   it('should exist', () => {
     assert(global.app.api.services['GraphqlService'])
   })
+
 })

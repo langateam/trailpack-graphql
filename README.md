@@ -5,7 +5,8 @@
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
 
-GraphQL Support for Trails
+This trailpack provides a [Relay-compatible](https://facebook.github.io/relay/docs/graphql-relay-specification.html)
+GraphQL implementation for Trails.
 
 ## Install
 
