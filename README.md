@@ -6,7 +6,7 @@
 [![Code Climate][codeclimate-image]][codeclimate-url]
 
 This trailpack provides a [Relay-compatible](https://facebook.github.io/relay/docs/graphql-relay-specification.html)
-GraphQL implementation for Trails.
+GraphQL implementation for [Trails](http://trailsjs.io).
 
 ## Install
 
