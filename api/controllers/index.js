@@ -1,0 +1,1 @@
+exports.GraphqlController = require('./GraphqlController')
