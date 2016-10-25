@@ -16,7 +16,7 @@ GraphQL implementation for [Trails](http://trailsjs.io).
 $ npm install --save trailpack-graphql
 ```
 
-## Configure
+### Configure
 
 ```js
 // config/main.js
@@ -37,20 +37,20 @@ module.exports = {
 ```js
 class User extends Model {
   static schema () {
-    return {
-      id: {
-        type: 'GraphQLID'
-      },
-      username: {
-        type: 'GraphQLString'
-      },
-      roles: {
-        type: 'GraphQLList(Role)',
-        resolve: {
-          foreignKey: 'user'
-        }
+    return graphql`
+
+      type User {
+        id: ID!
+        email: String!
+        age: Int
+        role: Role!
       }
-    }
+
+      type Query {
+        getUserByEmail (email: String): User
+        getAllUsers (): [User]
+      }
+    `
   }
 }
 ```
@@ -60,52 +60,44 @@ class User extends Model {
 ```js
 class Role extends Model {
   static schema () {
-    return {
-      id: {
-        type: 'GraphQLID'
-      },
-      name: {
-        type: 'GraphQLString'
-      },
-      user: {
-        type: 'User'
+    return graphql`
+
+      type Role {
+        name: String!
+        users: [User]
       }
-    }
+
+      type Query {
+        getUserRoles (id: ID!): [Role]
+      }
+    `
   }
 }
 ```
 
-### Default Queries
+### Configure Resolvers
 
-Boilerplate CRUD queries are registered by default for each model.
+#### `UserService`
 
 ```js
-GraphqlService.query('readUser', { username: 'tjwebb' })
-GraphqlService.mutation('createUser', { username: 'tjwebb' })
-GraphqlService.mutation('updateUser', { username: 'tjwebb' }, { username: 'newuser' })
-GraphqlService.mutation('deleteUser', { username: 'tjwebb' })
+class UserService extends Service {
+  getUserByEmail (email) {
+    // get user by email
+  }
+}
 ```
 
-### Prepared Queries
+#### `config/graphql.js`
 
 ```js
-// api/queries/rolesByUsername.js
-module.exports = `
-  query rolesByUsername ($username: String!) {
-    user (username: $username) {
-      roles {
-        id
-        name
-      }
-    }
-  }`
-```
+module.exports = {
+  enableIntrospectionQueries: true,
+  enableAnonymousQueries: true,
 
-```js
-GraphqlService.query('rolesByUsername', { username: 'tjwebb' })
-  .then(result => {
-    // ...
-  })
+  resolvers: {
+    getUserByEmail: 'UserService.getUserByEmail'
+  }
+}
 ```
 
 ## References

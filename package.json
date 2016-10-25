@@ -1,5 +1,5 @@
 {
-  "name": "trailpack-archetype",
+  "name": "trailpack-graphql",
   "version": "0.0.0",
   "description": "GraphQL Support for Trails",
   "homepage": "",
@@ -15,10 +15,11 @@
     "trailjs"
   ],
   "dependencies": {
-    "graphql": "^0.4.18",
     "lodash": "^4.5.1",
     "trailpack": "latest",
-    "trails-model": "^1.0.0-beta-2"
+    "trails-controller": "^1.0.0-beta-2",
+    "trails-model": "^1.0.0-beta-2",
+    "trails-service": "^1.0.0-beta-2"
   },
   "devDependencies": {
     "eslint": "^2.0.0-beta.1",
