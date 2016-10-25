@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- 4
+- 5
+- 6
+
+notifications:
+  email: false
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/54f8a1e753f859f5ca1a
+    on_start: never
+    on_failure: change
+
+deploy:
+  provider: npm
+  email: hello@langa.io
+  api_key:
+    secure: RB3K0S+U7SbFJPNBaEPBZ/RDOhzvhH1+0vNAVOchFcXNGpAaB6YUtvc0MvXiIwGQEMQydXwGh5vnCwRn8X7131O+WAC4Hphz2xAyCSSSxgEftJoYW2/1gK3j9gnGYvMSfuW1p0VfMkud2nVONUOaIPKrp5TojDYLL70nIj0LAcBhlSd6witKcXNKm1LdYUBnstwRGesvGg/8YKi2zDH85/vg5m5BwdltQThI5tqhgsb/PBWBtVKWLbI833/B8kwUKw8jfZC+wewNI+om2+fzitcSt7hsVWq6mOc3RFWG2rjOYEj58ik1vaUw27xbyktPg5m/mign0+PK/1dvjn/NmIIydD9LS8SoNoCfX5GzTQ4M2PreNJ3c9AhvVDbL2OuWpo3dvM9a7TmYpWzmuiCidt+UrPcx09GfSeS6V2EaNlmAt4biHYYIuuG2bMJOr9SdfqrRz1RQdTg2aMmXeOWR2C7iPPiOrQzqwPoK3aUJrWj/S9jtq9QuTkGz7tpx0jbMDTHqo0/4pyD1RQGZJat9Qi5ItoS39MvntSAeOnFeeC1tngt+AQ1gKEAwod+Bww4ODT2yPjfO6TWUW9VmGEgsHgYjhaT8gy9qVV0F9jqywach19ULfo6VP+Hr4dyw8ipfxx50PSGymXUsZ3uJalZITGiK3pWaeaejlVOY6i5dm+U=
+  on:
+    tags: true
+    repo: langateam/trailpack-graphql
