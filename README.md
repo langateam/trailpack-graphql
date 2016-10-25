@@ -47,10 +47,18 @@ class User extends Model {
       }
 
       type Query {
-        getUserByEmail (email: String): User
-        getAllUsers (): [User]
+        user (email: String): User
+        allUsers (): [User]
       }
     `
+  }
+
+  static resolver () {
+    return {
+      user ({ email }) {
+        // find user by email
+      }
+    }
   }
 }
 ```
@@ -68,34 +76,15 @@ class Role extends Model {
       }
 
       type Query {
-        getUserRoles (id: ID!): [Role]
+        userRoles (id: ID!): [Role]
       }
     `
   }
-}
-```
 
-### Configure Resolvers
-
-#### `UserService`
-
-```js
-class UserService extends Service {
-  getUserByEmail (email) {
-    // get user by email
-  }
-}
-```
-
-#### `config/graphql.js`
-
-```js
-module.exports = {
-  enableIntrospectionQueries: true,
-  enableAnonymousQueries: true,
-
-  resolvers: {
-    getUserByEmail: 'UserService.getUserByEmail'
+  static resolver () {
+    userRoles ({ userId }) {
+      // select roles from role where role.user_id = userId
+    }
   }
 }
 ```
