@@ -107,10 +107,10 @@ class Role extends Model {
 
 [npm-image]: https://img.shields.io/npm/v/trailpack-graphql.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/trailpack-graphql
-[ci-image]: https://img.shields.io/travis//trailpack-graphql/master.svg?style=flat-square
+[ci-image]: https://img.shields.io/travis/langateam/trailpack-graphql/master.svg?style=flat-square
 [ci-url]: https://travis-ci.org//trailpack-graphql
-[daviddm-image]: http://img.shields.io/david//trailpack-graphql.svg?style=flat-square
-[daviddm-url]: https://david-dm.org//trailpack-graphql
-[codeclimate-image]: https://img.shields.io/codeclimate/github//trailpack-graphql.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github//trailpack-graphql
+[daviddm-image]: http://img.shields.io/david/langateam/trailpack-graphql.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/langateam/trailpack-graphql
+[codeclimate-image]: https://img.shields.io/codeclimate/github/langateam/trailpack-graphql.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/langateam/trailpack-graphql
 
