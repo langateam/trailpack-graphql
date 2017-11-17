@@ -46,7 +46,7 @@ class User extends Model {
         role: Role!
       }
 
-      type Query {
+      type UserQuery {
         user (email: String): User
         allUsers (): [User]
       }
