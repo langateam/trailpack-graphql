@@ -28,16 +28,12 @@ module.exports = class GraphqlTrailpack extends Trailpack {
    */
   initialize () {
     const models = this.app.models
-
+    
     const gqlModels = Object.keys(models)
       .map(k => [ models[k], k ])
-      .filter(([ model, modelName ]) => {
-        const config = model.constructor.config()
-        return config && config.type === 'graphql'
-      })
 
     const schemaString = gqlModels
-      .map(([ model, modelName ]) => model.constructor.schema(graphqlTag) || '')
+      .map(([ model, modelName ]) => model.constructor.graphqlSchema(graphqlTag) || '')
       .join('\n')
 
     const rootQueryBody = gqlModels
