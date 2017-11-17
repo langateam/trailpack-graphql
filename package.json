@@ -15,22 +15,19 @@
     "trailjs"
   ],
   "dependencies": {
-    "graphql": "^0.7.2",
+    "graphql": "^0.11.7",
     "lodash": "^4.5.1",
-    "trailpack": "latest",
-    "trails-controller": "^1.0.0-beta-2",
-    "trails-model": "^1.0.0-beta-2",
-    "trails-service": "^1.0.0-beta-2"
+    "trailpack": "v2-latest"
   },
   "devDependencies": {
     "eslint": "^2.0.0-beta.1",
     "eslint-config-trails": "^1.0.1",
     "mocha": "^2.3",
-    "smokesignals": "^1.0.2",
-    "trailpack-core": "^1.0.0-beta-3",
-    "trailpack-datastore": "^1.0.0",
-    "trailpack-router": "^1.0.0-beta-4",
-    "trails": "^1.0.0-beta-1"
+    "smokesignals": "v2-latest",
+    "trailpack-core": "2.0.0",
+    "trailpack-datastore": "2.0.0",
+    "trailpack-router": "v2-latest",
+    "trails": "v2-latest"
   },
   "scripts": {
     "test": "eslint . && mocha"
