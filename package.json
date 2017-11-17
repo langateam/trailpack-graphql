@@ -25,7 +25,7 @@
     "mocha": "^2.3",
     "smokesignals": "v2-latest",
     "trailpack-core": "v2-latest",
-    "trailpack-datastore": "v2-latest",
+    "trailpack-datastore": "2.0.0",
     "trailpack-router": "v2-latest",
     "trails": "v2-latest"
   },
