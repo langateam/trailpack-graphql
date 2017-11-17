@@ -28,12 +28,15 @@ module.exports = class GraphqlTrailpack extends Trailpack {
    */
   initialize () {
     const models = this.app.models
+    
+    const gqlModels = Object.keys(models)
+      .map(k => [ models[k], k ])
 
-    const schemaString = models
+    const schemaString = gqlModels
       .map(([ model, modelName ]) => model.constructor.graphqlSchema(graphqlTag) || '')
       .join('\n')
 
-    const rootQueryBody = models
+    const rootQueryBody = gqlModels
       .map(([ model, modelName ]) => `${modelName.toLowerCase()}: ${modelName}Query`)
       .join('\n')
 
@@ -51,7 +54,7 @@ module.exports = class GraphqlTrailpack extends Trailpack {
 
     this.schema = buildSchema(this.schemaString)
 
-    this.resolvers = models
+    this.resolvers = gqlModels
       .map(([ model, modelName ]) => {
         return {
           [modelName.toLowerCase()]: model.constructor.resolver(this.app) || { }
